@@ -1,0 +1,45 @@
+{
+  "name": "samay",
+  "version": "0.1.0",
+  "description": "Wrapper around JavaScript Date with custom functions.",
+  "main": "Samay.js",
+  "scripts": {
+    "test": "ava -v"
+  },
+  "keywords": [
+    "JavaScript",
+    "Date"
+  ],
+  "author": "Neerav Pandya",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 3 versions"
+            ],
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "ava": {
+    "files": [
+      "tests/*.js"
+    ],
+    "require": [
+      "babel-register",
+      "./tests/helpers/setup-browser-env.js"
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-preset-env": "^1.2.1",
+    "babel-register": "^6.23.0",
+    "browser-env": "^2.0.24"
+  }
+}
