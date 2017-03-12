@@ -1,9 +1,9 @@
-import DAYS from './utils/Days';
-import MONTHS from './utils/Months';
-import SYMBOL from './utils/Symbol';
-import FORMAT from './utils/Format';
-import Util from './utils/Util';
-import Factory from './utils/Factory';
+import DAYS  from './utils/Days';
+import MONTHS  from './utils/Months';
+import SYMBOL  from './utils/Symbol';
+import FORMAT  from './utils/Format';
+import Util  from './utils/Util';
+import Factory  from './utils/Factory';
 
 
 class Samay {
@@ -613,7 +613,7 @@ class Samay {
         if(! months) return this;
 
         if(Math.sign(months) === -1) return this.addMonths(Math.abs(months));
-         
+
         let isLastDay = this.daysInMonth() === this._date;
         let days = this._date;
         let year = this._year;
@@ -1592,5 +1592,4 @@ class Samay {
     
     window.Samay = Samay;
     export default Samay;
-
-
+    // module.exports = Samay;

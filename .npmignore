@@ -1,0 +1,5 @@
+docs/
+tests/
+.nyc_output
+.idea
+coverage
