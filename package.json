@@ -1,9 +1,12 @@
 {
   "name": "samay",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Samay is an elegant wrapper around JavaScript Date with custom functions.",
-  "keywords":["Date", "JavaScript Date Wrapper"],
   "main": "Samay.js",
+  "repository":"neeravp/Samay",
+  "bugs": {
+    "url": "https://github.com/neeravp/Samay/issues"
+  },
   "scripts": {
     "build":"babel Samay.js --out-dir lib",
     "test": "nyc ava --verbose",

@@ -10,7 +10,15 @@ for one of my projects. Now I have been using **Samay** in some of my projects c
 support planned for future). Having said that, I would like to mention that Samay has not been tested for all edge cases.  
   
 #### Install  
-I have not yet packaged as npm package so for the time being clone this repo into your project and then include it in your build process.  
+```javascript
+npm install samay --save
+```  
+Then in your build process require samay in any of your files like  
+```javascript
+//samay.js or whatever other file  
+require('samay')
+```  
+
 Once `Samay.js` is built through (only transpile to es5 for cross browser support is required) your build process, inclued Samay.js in your file (if not already bundled into your main/app.js). **Samay** is then available as a global (window.Samay = Samay).  
 Samay is written in ES 2015. 
   
@@ -117,7 +125,7 @@ like `let dt1 = dt.clone().addDays().subtractMinutes()` - here dt will not be mu
 
 #### Methods for comparision  
   
-````javascript  
+```javascript  
     
     dt.eq(dt1)              //returns false   eq <=> equals
     dt.ne(dt1)              //returns true    ne <=> not equals
@@ -128,7 +136,8 @@ like `let dt1 = dt.clone().addDays().subtractMinutes()` - here dt will not be mu
     
     dt.between(dt1, dt2)    //returns a boolean indicating whether dt falls between the dt1 and dt2
     
- ```
+ ```  
+
  By default all comparision methods will check for equality of the date portion only. If you want to do a strict checking
  by comparing the `time` value you may pass a second argument as `true` like `dt.eq(dt1, true)` 
  For `between()` , by default it does not include the boundaries i.e. it checks only for `dt > dt1 and dt < dt2`, if you want 
@@ -136,9 +145,9 @@ like `let dt1 = dt.clone().addDays().subtractMinutes()` - here dt will not be mu
  If you want to use the strict mode in `between()` then pass **true** as the fourth argument.  
 
 #### Formatting  
-Samay supports many formats  
+Samay supports many formats
 
-````javascript
+```javascript
 
 let dt = new Samay('2010-03-15 09:30:15');
 
@@ -182,9 +191,9 @@ dt.toCookieString()                     //returns Monday, 15-March-2010 09:30:15
 dt.getCookieString()                    //returns Monday, 15-March-2010 09:30:15 GMT+05:30
 dt.format('Cookie')                     //returns Monday, 15-March-2010 09:30:15 GMT+05:30
 
-```
-
-#### Getters and Setters
+```  
+  
+#### Getters and Setters  
 
 ```javascript
 dt.date()                               //returns the date of the instance formatted as two digit string
@@ -212,9 +221,9 @@ dt.minutes()
 dt.minutes(15)
 dt.hours()
 dt.hours(23)
-```
+```  
 
-#### Information
+#### Information  
 
 ```javascript
 dt.dayOfYear()                          //returns the day of year
