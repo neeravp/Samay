@@ -3,11 +3,10 @@ Wrapper around javascript Date.
   
 An attempt to implement the cool features similar to PHP's Carbon library in javascript.  
   
-Although **moment.js** is a pretty good solid library which I have used on many projects, I wanted something very similar to Carbon 
+Although **moment.js** is a pretty good, battle-tested library which I have used on many projects, I wanted something very similar to Carbon 
 for one of my projects. Now I have been using **Samay** in some of my projects completely replacing moment.  
   
-**Note** This is just a wrapper around the javascript `Date` and nothing more. Samay also does not support localization as of now (limited localization 
-support planned for future). Having said that, I would like to mention that Samay has not been tested for all edge cases.  
+**Note** This is just a wrapper around the javascript `Date` and nothing more. Samay also does not support localization as of now. Having said that, I would like to mention that Samay has not been tested for all edge cases.  
   
 #### Install  
 ```javascript
@@ -60,17 +59,17 @@ like `let dt1 = dt.clone().addDays().subtractMinutes()` - here dt will not be mu
     let dt = new Samay(2017,01,01,09,30,14,230);
     dt.nextMonth()                              //returns 2017-02-01 09:30:15
     dt.previousMonth()                          //returns 2016-12-01 09:30:15
-    dt.monthAfter(2)                            //'2' can be any integer 
-    dt.monthBefore(3)
+    dt.monthAfter(2)                            //returns 2017-03-01 09:30:15
+    dt.monthBefore(3)                           //returns 2016-10-01 09:30:15
     dt.firstOfMonth('Friday')                   //returns the samay instance representing the 1st Friday of the month
-    dt.lastOfMonth('Monday')                   //returns the samay instance representing the last Monday of the month
-    dt.nthOfMonth('Friday')                   //returns the samay instance representing the nth Friday of the month
+    dt.lastOfMonth('Monday')                    //returns the samay instance representing the last Monday of the month
+    dt.nthOfMonth('Friday')                    //returns the samay instance representing the nth Friday of the month
 
 
-    dt.nextWeek()
-    dt.previousWeek()
-    dt.weekBefore()
-    dt.weekAfter()
+    dt.nextWeek()                              //returns 2017-01-08 09:30:15
+    dt.previousWeek()                          //returns 2016-12-25 09:30:15 
+    dt.weekBefore(2)                           //returns 2016-12-18 09:30:15 
+    dt.weekAfter(3)                            //returns 2017-01-22 09:30:15
     
     dt.nextQaurter()
     dt.previousQuarter()

@@ -1,8 +1,50 @@
 import DAYS from './Days';
 import MONTHS from './Months';
 
-class Util{
+class Util {
 	constructor(){}	
+
+    /**
+     * Return the number of milliseconds in one hour.
+     * @return Number milliseconds.
+     */
+    static millisecondsInMinute(){
+        return 60*1000;
+    }
+
+    /**
+     * Return the number of milliseconds in one hour.
+     * @return Number milliseconds.
+     */
+    static millisecondsInHour(){
+        return 60*60*1000;
+    }
+
+    /**
+     * Return the number of milliseconds in one day
+     * @return Number milliseconds
+     */
+    static millisecondsInDay(){
+        return 24*60*60*1000;
+    }
+    
+    /**
+     * Determine the sequential days in week depending upon the startOfWeek
+     *
+     * @static
+     * @param {string} [startOfWeek='Monday']
+     * @returns
+     * @memberof Util
+     */
+    static days(startOfWeek = 'Monday') {
+        let week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        let index = week.indexOf(startOfWeek);
+        let startTillEnd = week.splice(index);
+        let tillStart = week.slice(0, index);
+        let days = startTillEnd.concat(tillStart);
+        days.splice(0, 0, 'Shifter');
+        return days;
+    }
 
 	/**
 	 * Function to pad a number with leading padChar(s) upto the specified width.
