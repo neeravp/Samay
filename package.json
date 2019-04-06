@@ -1,6 +1,6 @@
 {
   "name": "samay",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Samay is an elegant wrapper around JavaScript Date with custom functions.",
   "main": "Samay.js",
   "repository": "neeravp/Samay",

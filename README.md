@@ -63,7 +63,7 @@ like `let dt1 = dt.clone().addDays().subtractMinutes()` - here dt will not be mu
     dt.monthBefore(3)                           //returns 2016-10-01 09:30:15
     dt.firstOfMonth('Friday')                   //returns the samay instance representing the 1st Friday of the month
     dt.lastOfMonth('Monday')                    //returns the samay instance representing the last Monday of the month
-    dt.nthOfMonth('Friday')                    //returns the samay instance representing the nth Friday of the month
+    dt.nthOfMonth(2,'Friday')                    //returns the samay instance representing the 2nd Friday of the month
 
 
     dt.nextWeek()                              //returns 2017-01-08 09:30:15
